@@ -1,4 +1,4 @@
-/* ************************************************************************
+/* ***********************************************************************
 
    Copyright:
 
@@ -75,7 +75,7 @@ qx.Class.define("studentlife.Application",
       });
 
 
-      var logo = new qx.ui.basic.Image("/home/mike/git/tests/StudentLife/source/resource/studentlife/logo.png");
+      var logo = new qx.ui.basic.Image("studentlife/logo.png");
 
       
       doc.add(main);
@@ -87,7 +87,7 @@ qx.Class.define("studentlife.Application",
       var left = new qx.ui.container.Composite().set({width:154, backgroundColor:"white", maxHeight:447});
       left.setLayout(new qx.ui.layout.VBox());
 
-      var mycourses = new qx.ui.basic.Image("/home/mike/git/tests/StudentLife/source/resource/studentlife/mycourses.png");
+      var mycourses = new qx.ui.basic.Image("studentlife/mycourses.png");
       left.add(mycourses);
 
       var list = ["Mathematik1", "Mikroteilchen 1 - Einführung in die Teilchenlehre", "Physik 2"];
@@ -98,8 +98,8 @@ qx.Class.define("studentlife.Application",
       }
       
 /*
-      var seperator = new qx.ui.basic.Image("/home/mike/git/tests/StudentLife/source/resource/studentlife/columnborder.png");
-      var hbox2 = new qx.ui.basic.Image("/home/mike/git/tests/StudentLife/source/resource/studentlife/columnborder.png");
+      var seperator = new qx.ui.basic.Image("studentlife/columnborder.png");
+      var hbox2 = new qx.ui.basic.Image("studentlife/columnborder.png");
       
 
       var label1 = new qx.ui.basic.Label(").set({
@@ -118,17 +118,17 @@ qx.Class.define("studentlife.Application",
       left.add(label3);
 */
       var right = new qx.ui.container.Composite().set({width:154, maxHeight:256});
-      var alsoAttending = new qx.ui.basic.Image("/home/mike/git/tests/StudentLife/source/resource/studentlife/alsoattending.png");
+      var alsoAttending = new qx.ui.basic.Image("studentlife/alsoattending.png");
       right.setLayout(new qx.ui.layout.VBox());
-      var hSeparator = new qx.ui.basic.Image("/home/mike/git/tests/StudentLife/source/resource/studentlife/columnborder.png");
+      var hSeparator = new qx.ui.basic.Image("studentlife/columnborder.png");
       right.add(alsoAttending);
       
-      this.addAlsoAttending(right, "/home/mike/git/tests/StudentLife/source/resource/studentlife/testprofilepic1.png", "Gustav Klimt", "http://orf.at", "also attending 3 equal courses", "http://orf.at");
-      this.addAlsoAttending(right, "/home/mike/git/tests/StudentLife/source/resource/studentlife/testprofilepic2.png", "Gustav Klimt", "http://orf.at", "also attending 3 equal courses", "http://orf.at");
+      this.addAlsoAttending(right, "studentlife/testprofilepic1.png", "Gustav Klimt", "http://orf.at", "also attending 3 equal courses", "http://orf.at");
+      this.addAlsoAttending(right, "studentlife/testprofilepic2.png", "Gustav Klimt", "http://orf.at", "also attending 3 equal courses", "http://orf.at");
 
       main.add(left, {top:73, left:17});
       main.add(this.menuContainer(), {top:32, left:17});
-      main.add(this.adContainer("/home/mike/git/tests/StudentLife/source/resource/studentlife/payedAD.png"), {top:445, left:195});
+      main.add(this.adContainer("studentlife/payedAD.png"), {top:445, left:195});
       main.add(right, {top:73, right:23});
 
       var html = new qx.ui.embed.Html();
@@ -144,11 +144,11 @@ qx.Class.define("studentlife.Application",
       if (isActive) {
 	bgColor = "#F6F6F6"
       }
-      var hSeparator = new qx.ui.basic.Image("/home/mike/git/tests/StudentLife/source/resource/studentlife/columnborder.png");
+      var hSeparator = new qx.ui.basic.Image("studentlife/columnborder.png");
       var label = new qx.ui.basic.Label(text) .set({
 	  rich : true,
 	  selectable: true,
-	  font : "default", //new qx.bom.Font(10, ["Verdana", "sans-serif"]),
+	font : "default", //new qx.bom.Font(10, ["Verdana", "sans-serif"]),
 	  //font : new qx.bom.Font(10, ["ApexNew-Medium", "sans-serif"]),
 	  backgroundColor: bgColor,  
 	  //decorator: "separator-horizontal",
@@ -166,7 +166,7 @@ qx.Class.define("studentlife.Application",
    addAlsoAttending : function (container, image, name, link, info, addLink) {	
       var bgColor = "white";
       var item = new qx.ui.container.Composite(new qx.ui.layout.HBox());
-      var hSeparator = new qx.ui.basic.Image("/home/mike/git/tests/StudentLife/source/resource/studentlife/columnborder.png");
+      var hSeparator = new qx.ui.basic.Image("studentlife/columnborder.png");
       //item.setLayout(new qx.ui.layout.HBox());
 
       var imageContainer = new qx.ui.container.Composite();
@@ -202,7 +202,7 @@ qx.Class.define("studentlife.Application",
 	  rich : true,
 	  selectable: true,
 	  //font : "default", //new qx.bom.Font(10, ["Verdana", "sans-serif"]),
-	  font : new qx.bom.Font(10, ["Verdana", "sans-serif"]).set({bold:true}),
+	  font : new qx.bom.Font(10, ["Lucida Grande", "sans-serif"]).set({bold:true}),
 	  backgroundColor: bgColor,  
 	  //decorator: "separator-horizontal",
 	  padding: [2,0,0,0],
@@ -212,11 +212,11 @@ qx.Class.define("studentlife.Application",
       
       var closeContainer = new qx.ui.container.Composite(new qx.ui.layout.Canvas());
 
-      var closeImage = new qx.ui.basic.Image("/home/mike/git/tests/StudentLife/source/resource/studentlife/cross.png").set({
+      var closeImage = new qx.ui.basic.Image("studentlife/cross.png").set({
 	  padding:[0,0,0,0]
       });
 
-      var hoverImage = new qx.ui.basic.Image("/home/mike/git/tests/StudentLife/source/resource/studentlife/cross-hover.png").set({
+      var hoverImage = new qx.ui.basic.Image("studentlife/cross-hover.png").set({
 	  padding:[0,0,0,0]
       });
 
@@ -290,10 +290,10 @@ qx.Class.define("studentlife.Application",
       var leftContainer = new qx.ui.container.Composite(new qx.ui.layout.Flow());
 
       var label = new qx.ui.basic.Label("ABC");
-      var agendaImage = new qx.ui.basic.Image("/home/mike/git/tests/StudentLife/source/resource/studentlife/menu-agenda.png").set({
+      var agendaImage = new qx.ui.basic.Image("studentlife/menu-agenda.png").set({
 	  padding:[3,0,0,4]
       });
-      var menuImage = new qx.ui.basic.Image("/home/mike/git/tests/StudentLife/source/resource/studentlife/menu-courses.png").set({
+      var menuImage = new qx.ui.basic.Image("studentlife/menu-courses.png").set({
 	  padding:[3,0,0,19]
       });
 
@@ -307,11 +307,11 @@ qx.Class.define("studentlife.Application",
       flowLayout.setAlignX("right");
 
 
-      var courseSettingsImage = new qx.ui.basic.Image("/home/mike/git/tests/StudentLife/source/resource/studentlife/menu-coursesettings.png").set({
+      var courseSettingsImage = new qx.ui.basic.Image("studentlife/menu-coursesettings.png").set({
 	padding:[4,0,0,0]
       });
 
-      var menuVBorderImage = new qx.ui.basic.Image("/home/mike/git/tests/StudentLife/source/resource/studentlife/menu-vborder.png").set({
+      var menuVBorderImage = new qx.ui.basic.Image("studentlife/menu-vborder.png").set({
 	padding:[1,6,0,6]
       });
 
@@ -350,7 +350,7 @@ qx.Class.define("studentlife.Application",
 	rich:true,
 	selectable: true,
 	textColor : "#434445",
-	font : new qx.bom.Font(9, ["Verdana", "sans-serif"]),
+	font : new qx.bom.Font(9, ["Lucida Grande", "sans-serif"]),
 	padding: [1,0,0,0]
       });
       
