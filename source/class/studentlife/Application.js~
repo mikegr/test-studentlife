@@ -130,6 +130,12 @@ qx.Class.define("studentlife.Application",
       main.add(this.menuContainer(), {top:32, left:17});
       main.add(this.adContainer("/home/mike/git/tests/StudentLife/source/resource/studentlife/payedAD.png"), {top:445, left:195});
       main.add(right, {top:73, right:23});
+
+      var html = new qx.ui.embed.Html();
+      //html.setHtml("<div class=\"typeface-js\" style=\"font-family: Apex New\">Text here in Apex New Medium...</div>");
+      html.setHtml("<div class=\"typeface-js\" style=\"font-family: Apex New\">Text here in Apex New Medium...</div>");
+
+      main.add(html, {top: 73, left: 195});
       
     },  //main
 
@@ -142,8 +148,8 @@ qx.Class.define("studentlife.Application",
       var label = new qx.ui.basic.Label(text) .set({
 	  rich : true,
 	  selectable: true,
-	  //font : "default", //new qx.bom.Font(10, ["Verdana", "sans-serif"]),
-	  //font : new qx.bom.Font(10, ["Verdana", "sans-serif"]),
+	  font : "default", //new qx.bom.Font(10, ["Verdana", "sans-serif"]),
+	  //font : new qx.bom.Font(10, ["ApexNew-Medium", "sans-serif"]),
 	  backgroundColor: bgColor,  
 	  //decorator: "separator-horizontal",
 	  padding: [5,0,5,0],
@@ -224,6 +230,12 @@ qx.Class.define("studentlife.Application",
 	  closeContainer.removeAll();
 	  closeContainer.add(closeImage);
       });
+      closeContainer.addListener("click", function(e) {
+	  this.info("click");
+	  _typeface_js.initialize()
+	  //remove this item and refresh
+      });
+
       closeContainer.add(closeImage);
 
       profileContainer.add(profileLabel, {top:0, left:0});

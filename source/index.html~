@@ -3,15 +3,15 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>StudentLife</title>
+<!--
   <script type="text/javascript" src="script/studentlife.js"></script>
+-->
   <script type="text/javascript" src="typeface-0.14.js"></script>
   <script type="text/javascript" src="apex_new_medium.typeface.js"></script>
 </head>
 <body>
-<!--
     <div class="typeface-js" style="font-family: Apex New">
       Text here in Apex New Medium...
     </div>
--->
 </body>
 </html>
